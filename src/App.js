@@ -1,8 +1,10 @@
 import './App.css';
+import Translation from "./components/Translation"
 
 function App() {
   return (
     <div className="App">
+      <Translation />
       <header className="App-header">
         <img src="https://pngimg.com/uploads/robot/robot_PNG88.png" className="App-logo" alt="logo" />
         <p>
