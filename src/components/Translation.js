@@ -22,10 +22,8 @@ function translation() {
     return (
         < div >
             <div>
-                <form action="#" onSubmit={handleTranslation}>
-                    <input id="transInput" placeholder="Input your translation" required />
-                    <input type="submit" value="Translate" />
-                </form>
+                <input id="transInput" placeholder="Input your translation" required />
+                <input type="submit" value="Translate" onClick={handleTranslation} />
             </div>
         </div >
     )
