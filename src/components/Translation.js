@@ -28,6 +28,7 @@ import w from '../assets/individial_signs/w.png'
 import x from '../assets/individial_signs/x.png'
 import y from '../assets/individial_signs/y.png'
 import z from '../assets/individial_signs/z.png'
+import dash from '../assets/individial_signs/dash.png'
 
 function Translation() {
 
@@ -57,7 +58,8 @@ function Translation() {
         "w": w,
         "x": x,
         "y": y,
-        "z": z
+        "z": z,
+        "-": dash
     }
 
     const [imageList, setImageList] = useState();
@@ -71,7 +73,7 @@ function Translation() {
 
         arr.forEach(element => {
             if (element === " ") {
-                imgArray.push(" ")
+                imgArray.push(images["-"])
             } else {
                 imgArray.push(images[element])
             }

@@ -24,11 +24,11 @@
     background-color: gray;
     padding: 1rem;
     margin: 1rem;
-    border-radius: 10rem;
+    border-radius: 5rem;
 }
 
 #translated img {
-    scale: 50%;
+    width: 60px;
     background-color: darkgray;
     margin: 0.5rem;
     padding: 0.1rem;
