@@ -1,0 +1,36 @@
+#transInput {
+    height: 2rem;
+    width: 33%;
+    border-radius: 10rem;
+    padding: 0.5rem;
+}
+
+#transInput:focus {
+    outline: 0;
+}
+
+#translate-btn {
+    height: 3rem;
+    width: 5rem;
+    border-radius: 10rem;
+    background-color: gray;
+}
+
+#translate-btn:focus {
+    outline: 0;
+}
+
+#translated {
+    background-color: gray;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10rem;
+}
+
+#translated img {
+    scale: 50%;
+    background-color: darkgray;
+    margin: 0.5rem;
+    padding: 0.1rem;
+    border-radius: 50rem;
+}
