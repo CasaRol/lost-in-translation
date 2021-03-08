@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react"
-import AppHeader from "./components/AppHeader.js"
-import Login from "./components/Login.js"
 import "./App.css"
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { getStorage } from "./utils/localStorage"
+
+import AppHeader from "./components/AppHeader.js"
 import Translation from "./components/Translation"
+import Login from "./components/Login"
+import Profile from "./components/Profile"
 
 function App() {
   const [username, setUsername] = useState("")
@@ -16,12 +19,33 @@ function App() {
     setUsername(getStorage("username"))
   }, [])
 
+  function requireAuth(destination) {
+    if (username === false) {
+      return (<Login loginClicked={handleLoginClicked} />)
+    } else {
+      return destination
+    }
+  }
+
   return (
-    <div className="App">
-      <AppHeader username={username} updateUsername={setUsername} />
-      <Login loginClicked={handleLoginClicked} />
-      <Translation></Translation>
-    </div>
+    <Router>
+      <div className="App">
+        <AppHeader username={username} updateUsername={setUsername} />
+
+        <Switch>
+          <Route exact path="/">
+            {requireAuth(<Translation />)}
+          </Route>
+          <Route exact path="/login">
+            <Login loginClicked={handleLoginClicked} />
+          </Route>
+          <Route exact path="/profile">
+            {requireAuth(<Profile />)}
+          </Route>
+        </Switch>
+
+      </div>
+    </Router>
   )
 }
 
