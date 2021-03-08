@@ -7,9 +7,10 @@ function Translation() {
     const [signs, setSigns] = useState([])
     const [textToTranslate, setTextToTranslate] = useState("")
 
-    function handleTranslation() {
+    function handleTranslation(event) {
+        event.preventDefault();
 
-        let signArray = []
+        let signArray = [] //Sanitizing state by clearing array
 
         let charArray = Array.from(textToTranslate.toLowerCase())
 
