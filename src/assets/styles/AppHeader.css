@@ -46,7 +46,7 @@
 	font-size: 25px;
 }
 
-.userName {
+#username {
     margin-left: auto;
     margin-right: -0.35rem;
     padding: 0.1rem;
@@ -58,3 +58,24 @@
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
 }
+
+#logout {
+    margin-left: auto;
+    margin-right: 1rem;
+    padding: 0.1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-family: "Sanchez";
+    color: var(--yellow);
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+#logout:hover {
+    background-color: var(--purple);
+}
+
+#logout:active {
+    transform: scale(0.96);
+}
+

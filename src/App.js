@@ -4,6 +4,7 @@ import Login from "./components/Login.js"
 import "./App.css"
 import { getStorage } from "./utils/localStorage"
 import Translation from "./components/Translation"
+import Profile from "./components/Profile.js"
 
 function App() {
   const [username, setUsername] = useState("")
@@ -21,6 +22,7 @@ function App() {
       <AppHeader username={username} updateUsername={setUsername} />
       <Login loginClicked={handleLoginClicked} />
       <Translation></Translation>
+      <Profile />
     </div>
   )
 }

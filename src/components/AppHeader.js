@@ -3,13 +3,14 @@ import "../assets/styles/AppHeader.css"
 import logo from "../assets/images/stylingImages/Logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUserCircle as avatar } from "@fortawesome/free-solid-svg-icons"
-import { getStorage } from "../utils/localStorage"
-import { useEffect } from "react";
+import { getStorage, clearStorage } from "../utils/localStorage"
+import { useEffect } from "react"
 
 function AppHeader({ username, updateUsername }) {
+	let isProfileLoaded = true
 	const userIcon = (
 		<>
-			<div className="userName">{getStorage("username")}</div>
+			<div id="username">{getStorage("username")}</div>
 			<FontAwesomeIcon icon={avatar} size="2x" inverse />
 		</>
 	)
@@ -28,7 +29,8 @@ function AppHeader({ username, updateUsername }) {
 						<img className="logoRobot" src={logo} alt="logoRobot" />
 					</div>
 					<div className="headerTitle">Lost in Translation</div>
-					{username && userIcon}
+					{username && !isProfileLoaded && userIcon}
+					{isProfileLoaded && <div id="logout" onClick={clearStorage}>Logout</div>}
 				</div>
 				<hr />
 			</header>
