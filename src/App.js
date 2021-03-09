@@ -7,6 +7,7 @@ import AppHeader from "./components/AppHeader.js"
 import Translation from "./components/Translation"
 import Login from "./components/Login"
 import Profile from "./components/Profile"
+import NotFound from "./components/NotFound"
 
 function App() {
   const [username, setUsername] = useState("")
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route exact path="/profile">
             {requireAuth(<Profile />)}
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
 
