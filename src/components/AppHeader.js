@@ -1,9 +1,12 @@
+//Styling imports
 import "../App.css"
 import "../assets/styles/AppHeader.css"
 import logo from "../assets/images/stylingImages/Logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUserCircle as avatar } from "@fortawesome/free-solid-svg-icons"
+//Functional imports
 import { getStorage } from "../utils/localStorage"
+//Rounting imports
 import { Link } from 'react-router-dom'
 
 function AppHeader(props) {
@@ -18,15 +21,15 @@ function AppHeader(props) {
 
 	)
 	const logoutIcon = (
-		<>
+		<div>
 			<button type="button" id="logout" onClick={props.logoutClicked}>
 				Logout
 			</button>
-		</>
+		</div>
 	)
 
 	return (
-		<>
+		<div>
 			<header className="headerMain">
 				<div className="headerTop">
 					<Link to="/">
@@ -42,7 +45,7 @@ function AppHeader(props) {
 
 				<hr />
 			</header>
-		</>
+		</div>
 	)
 }
 

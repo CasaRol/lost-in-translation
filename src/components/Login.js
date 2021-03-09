@@ -1,7 +1,8 @@
-import { isStorageAvailable, setStorage } from "../utils/localStorage"
-
+//Styling imports
 import "../App.css"
 import "../assets/styles/Login.css"
+//Functional imports
+import { isStorageAvailable, setStorage } from "../utils/localStorage"
 import { useState } from "react"
 
 function Login(props) {

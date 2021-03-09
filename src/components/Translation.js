@@ -1,8 +1,9 @@
+//Styling imports
+import "../assets/styles/translation.css"
+//Functional imports
 import { useState } from "react"
 import { isStorageAvailable, setStorage } from "../utils/localStorage"
 import { saveTranslation } from "../utils/translationHistory"
-
-import "../assets/styles/translation.css"
 
 function Translation() {
 	const [signs, setSigns] = useState([])
@@ -28,14 +29,14 @@ function Translation() {
 		setSigns(signArray)
 	}
 
-    function updateTranslationHistory(text) {
+	function updateTranslationHistory(text) {
 		if (text.length === 0) {
 			setIsEnteredTextEmpty(true)
 		} else {
 			setIsEnteredTextEmpty(false)
 			if (isStorageAvailable) setStorage("translations", saveTranslation(textToTranslate))
 		}
-    }
+	}
 
 	return (
 		<div>

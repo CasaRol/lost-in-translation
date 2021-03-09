@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react"
+//Styling imports
 import "./App.css"
+//functional imports
+import { useEffect, useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { getStorage, clearStorage } from "./utils/localStorage"
-
+//Component imports
 import AppHeader from "./components/AppHeader.js"
 import Translation from "./components/Translation"
 import Login from "./components/Login"
