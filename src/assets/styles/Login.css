@@ -1,69 +1,7 @@
-.input-container {
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	height: 7rem;
-	width: 60%;
-	background-color: white;
-	border-radius: 1rem;
-	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
-	z-index: 1;
-}
-
-.input-box {
-	display: flex;
-	margin-top: 1rem;
-	align-self: center;
-	width: 80%;
-	max-width: 30rem;
-}
-
-.input-box input {
-	width: 100%;
-	padding: 0.6rem 1rem 0.4rem 1rem;
-	box-sizing: border-box;
-	background: var(--light_grey);
-	border: 0.2rem solid var(--grey);
-	font-size: 1.4rem;
-	border-radius: 4rem;
-}
-
-.input-box button {
-	width: 8rem;
-	margin-left: 1rem;
-	padding: 0.6rem 1rem 0.4rem 1rem;
-	box-sizing: border-box;
-	background: var(--yellow);
-	border: 0.2rem solid black;
-	color: white;
-	font-size: 1.4rem;
-	border-radius: 1rem;
-}
-
-.input-box button:hover {
-    background-color: var(--purple);
-}
-
-.input-box button:active {
-    transform: scale(0.96);
-}
-
 .purple-line {
 	margin-top: auto;
 	height: 1.2rem;
 	background-color: var(--purple);
 	border-bottom-left-radius: 1rem;
 	border-bottom-right-radius: 1rem;
-}
-
-.error {
-    align-self: center;
-    padding-left: 2.5rem;
-    width: 80%;
-	max-width: 30rem;
-	color: #db2269;
-	font-size: 1rem;
 }

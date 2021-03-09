@@ -1,0 +1,11 @@
+h1 {
+	text-align: center;
+	font-family: "Love Ya Like A Sister";
+	color: var(--yellow);
+	font-weight: lighter;
+	text-rendering: geometricPrecision;
+	--minFontSize: 2rem;
+	--maxFontSize: 8rem;
+	--scaler: 4vw;
+	font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+}

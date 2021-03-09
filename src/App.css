@@ -8,15 +8,3 @@
 	--light_grey: #efefef;
 	--grey: #969696;
 }
-
-h1 {
-	display: inline-block;
-	font-family: "Love Ya Like A Sister";
-	color: white;
-	font-weight: lighter;
-	text-rendering: geometricPrecision;
-	--minFontSize: 2rem;
-	--maxFontSize: 8rem;
-	--scaler: 4vw;
-	font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
-}
