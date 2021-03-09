@@ -1,12 +1,15 @@
+//Styling imports
+import "../assets/styles/Profile.css"
+//Functional imports
 import { useState } from "react"
 import { getStorage } from "../utils/localStorage"
-import "../assets/styles/Profile.css"
+
 
 function Profile({ username }) {
     const [translations] = useState(getStorage("translations"))
 
     return (
-		<>
+		<div>
 			<div className="background-container">
 				<div id="username-container">
 					<h2 id="name">{username}'s</h2>
@@ -22,7 +25,7 @@ function Profile({ username }) {
 						</div>
 					))}
 			</div>
-		</>
+		</div>
 	)
 }
 

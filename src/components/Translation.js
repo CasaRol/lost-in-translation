@@ -1,9 +1,10 @@
+//Styling imports
+import "../assets/styles/Translation.css"
+import "../assets/styles/InputBox-common.css"
+//Functional imports
 import { useState } from "react"
 import { isStorageAvailable, setStorage } from "../utils/localStorage"
 import { saveTranslation } from "../utils/translationHistory"
-
-import "../assets/styles/InputBox-common.css"
-import "../assets/styles/Translation.css"
 
 function Translation() {
 	const [signs, setSigns] = useState([])
