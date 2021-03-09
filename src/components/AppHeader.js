@@ -3,23 +3,22 @@ import "../assets/styles/AppHeader.css"
 import logo from "../assets/images/stylingImages/Logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUserCircle as avatar } from "@fortawesome/free-solid-svg-icons"
-import { getStorage, clearStorage } from "../utils/localStorage"
-import { useEffect } from "react"
+import { getStorage } from "../utils/localStorage"
 
-function AppHeader({ username, updateUsername }) {
-	let isProfileLoaded = true
+function AppHeader(props) {
 	const userIcon = (
+		<div id="user-icon">
+			<button type="button" id="username">{getStorage("username")}</button>
+			<FontAwesomeIcon id="icon" icon={avatar} size="2x" inverse />
+		</div>
+	)
+	const logoutIcon = (
 		<>
-			<div id="username">{getStorage("username")}</div>
-			<FontAwesomeIcon icon={avatar} size="2x" inverse />
+			<button type="button" id="logout" onClick={props.logoutClicked}>
+				Logout
+			</button>
 		</>
 	)
-
-	useEffect(() => {
-		window.addEventListener("storage", () => {
-			updateUsername(getStorage("username"))
-		})
-	})
 
 	return (
 		<>
@@ -29,8 +28,8 @@ function AppHeader({ username, updateUsername }) {
 						<img className="logoRobot" src={logo} alt="logoRobot" />
 					</div>
 					<div className="headerTitle">Lost in Translation</div>
-					{username && !isProfileLoaded && userIcon}
-					{isProfileLoaded && <div id="logout" onClick={clearStorage}>Logout</div>}
+					{props.username && userIcon}
+					{props.username && logoutIcon}
 				</div>
 				<hr />
 			</header>
