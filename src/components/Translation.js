@@ -1,5 +1,6 @@
 //Styling imports
-import "../assets/styles/translation.css"
+import "../assets/styles/Translation.css"
+import "../assets/styles/InputBox-common.css"
 //Functional imports
 import { useState } from "react"
 import { isStorageAvailable, setStorage } from "../utils/localStorage"
@@ -40,15 +41,19 @@ function Translation() {
 
 	return (
 		<div>
-			<div>
+			<div className="input-container">
+				<div className="input-box">
+					<input
+						className="input-text"
+						onChange={(e) => setTextToTranslate(e.target.value)}
+						placeholder="Input your translation"
+						required
+					/>
+					<button type="button" value="Translate" onClick={handleTranslation}>
+						Translate
+					</button>
+				</div>
 				{isEnteredTextEmpty && <div className="error">Translation text must not be empty!</div>}
-				<input
-					id="transInput"
-					onChange={(e) => setTextToTranslate(e.target.value)}
-					placeholder="Input your translation"
-					required
-				/>
-				<input id="translate-btn" type="submit" value="Translate" onClick={handleTranslation} />
 			</div>
 			<div id="translated">
 				{signs &&

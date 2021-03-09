@@ -11,14 +11,14 @@ import { Link } from 'react-router-dom'
 
 function AppHeader(props) {
 	const userIcon = (
-
-		<div id="user-icon" >
-			<Link to="/profile" >
-				<button type="button" id="username">{getStorage("username")}</button>
+		<div id="user-icon">
+			<Link to="/profile" className="link">
+				<button type="button" id="link-button">
+					{getStorage("username")}
+				</button>
 				<FontAwesomeIcon id="icon" icon={avatar} size="2x" inverse />
 			</Link>
-		</div >
-
+		</div>
 	)
 	const logoutIcon = (
 		<div>
@@ -32,18 +32,15 @@ function AppHeader(props) {
 		<div>
 			<header className="headerMain">
 				<div className="headerTop">
-					<Link to="/">
+					<Link to="/" className="link">
 						<div className="logoSplash">
 							<img className="logoRobot" src={logo} alt="logoRobot" />
 						</div>
-
 						<div className="headerTitle">Lost in Translation</div>
 					</Link>
 					{props.username && userIcon}
 					{props.username && logoutIcon}
 				</div>
-
-				<hr />
 			</header>
 		</div>
 	)
