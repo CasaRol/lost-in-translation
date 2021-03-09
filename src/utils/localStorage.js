@@ -21,12 +21,15 @@ export function isStorageAvailable(type) {
 
 export function setStorage(key, value) {
     const json = JSON.stringify(value)
-    const encrypted = btoa(json)
-    localStorage.setItem(key, encrypted)
+    localStorage.setItem(key, json)
 }
 
 export function getStorage(key) {
     const storedValue = localStorage.getItem(key)
     if (!storedValue) return false
-    return JSON.parse(atob(storedValue))
+    return JSON.parse(storedValue)
+}
+
+export function clearStorage() {
+    localStorage.clear()
 }

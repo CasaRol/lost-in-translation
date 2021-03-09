@@ -1,0 +1,33 @@
+#username-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+    min-width: 80%;
+	top: 25%;
+	left: 35%;
+	transform: translate(-30%, -50%);
+}
+
+#name {
+	font-family: "Sanchez";
+	color: var(--purple);
+}
+
+#title {
+	font-family: "Love Ya Like A Sister";
+    text-align: center;
+	color: white;
+	font-size: 3rem;
+}
+
+#translations {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: "Sanchez";
+}
+
+.translation-items{
+    padding-top: 1rem;
+}

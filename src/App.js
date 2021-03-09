@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import "./App.css"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { getStorage } from "./utils/localStorage"
+import { getStorage, clearStorage } from "./utils/localStorage"
 
 import AppHeader from "./components/AppHeader.js"
 import Translation from "./components/Translation"
@@ -16,9 +16,14 @@ function App() {
     setUsername(getStorage("username"))
   }
 
+  function handleLogoutClicked() {
+    clearStorage()
+    setUsername(getStorage("username"))
+  }
+
   useEffect(() => {
     setUsername(getStorage("username"))
-  }, [])
+  }, [username])
 
   function requireAuth(destination) {
     if (username === false) {
@@ -31,7 +36,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <AppHeader username={username} updateUsername={setUsername} />
+        <AppHeader username={username} updateUsername={setUsername} logoutClicked={handleLogoutClicked} />
 
         <Switch>
           <Route exact path="/">
@@ -41,7 +46,7 @@ function App() {
             <Login loginClicked={handleLoginClicked} />
           </Route>
           <Route exact path="/profile">
-            {requireAuth(<Profile />)}
+            {requireAuth(<Profile username={username} updateUsername={setUsername} />)}
           </Route>
           <Route path="*">
             <NotFound />
