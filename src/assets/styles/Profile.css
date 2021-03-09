@@ -2,11 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	position: absolute;
+	position: relative;
     min-width: 80%;
-	top: 25%;
-	left: 35%;
-	transform: translate(-30%, -50%);
 }
 
 #name {
@@ -17,7 +14,8 @@
 #title {
 	font-family: "Love Ya Like A Sister";
     text-align: center;
-	color: white;
+	color:var(--yellow);
+	margin-bottom: 4rem;
 	font-size: 3rem;
 }
 

@@ -1,3 +1,5 @@
+import "../assets/styles/NotFound.css"
+
 function NotFound() {
     return (
         <div>

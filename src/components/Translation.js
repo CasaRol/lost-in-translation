@@ -2,7 +2,8 @@ import { useState } from "react"
 import { isStorageAvailable, setStorage } from "../utils/localStorage"
 import { saveTranslation } from "../utils/translationHistory"
 
-import "../assets/styles/translation.css"
+import "../assets/styles/InputBox-common.css"
+import "../assets/styles/Translation.css"
 
 function Translation() {
 	const [signs, setSigns] = useState([])
@@ -28,26 +29,30 @@ function Translation() {
 		setSigns(signArray)
 	}
 
-    function updateTranslationHistory(text) {
+	function updateTranslationHistory(text) {
 		if (text.length === 0) {
 			setIsEnteredTextEmpty(true)
 		} else {
 			setIsEnteredTextEmpty(false)
 			if (isStorageAvailable) setStorage("translations", saveTranslation(textToTranslate))
 		}
-    }
+	}
 
 	return (
 		<div>
-			<div>
+			<div className="input-container">
+				<div className="input-box">
+					<input
+						className="input-text"
+						onChange={(e) => setTextToTranslate(e.target.value)}
+						placeholder="Input your translation"
+						required
+					/>
+					<button type="button" value="Translate" onClick={handleTranslation}>
+						Translate
+					</button>
+				</div>
 				{isEnteredTextEmpty && <div className="error">Translation text must not be empty!</div>}
-				<input
-					id="transInput"
-					onChange={(e) => setTextToTranslate(e.target.value)}
-					placeholder="Input your translation"
-					required
-				/>
-				<input id="translate-btn" type="submit" value="Translate" onClick={handleTranslation} />
 			</div>
 			<div id="translated">
 				{signs &&

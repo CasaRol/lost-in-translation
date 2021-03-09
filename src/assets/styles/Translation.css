@@ -1,0 +1,21 @@
+.input-container {
+	top: 25%;
+	left: 50%;
+}
+
+#translated {
+    text-align: center;
+    background-color: var(--yellow);
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 5rem;
+}
+
+#translated img {
+    width: 60px;
+    background-color: white;
+    margin: 0.5rem;
+    padding: 0.1rem;
+    border-radius: 50rem;
+}

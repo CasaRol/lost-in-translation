@@ -1,15 +1,11 @@
+
+
 .headerMain {
 	position: relative;
 	top: 0;
 	background-color: var(--yellow);
 	width: 100vw;
-	min-height: 15rem;
-	height: 50vh;
-}
-
-.headerMain hr {
-	border: none;
-	border-bottom: 0.1rem solid var(--yellow_dark);
+	height: 4rem;
 }
 
 .headerTop {
@@ -47,51 +43,65 @@
 }
 
 #user-icon {
-	display: flex;
-	align-items: center;
-    margin-left: auto;
+	margin-left: auto;
 }
 
-#username {
-    margin-right: -0.35rem;
-    padding: 0.1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    font-family: "Sanchez";
+.link {
+	display: flex;
+	align-items: center;
+	max-height: 1.5rem;
+	text-decoration: none;
+}
+
+#link-button {
+	margin-right: -0.35rem;
+	padding: 0.1rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	font-family: "Sanchez";
 	font-size: 1rem;
-    color: var(--yellow);
-    background-color: white;
+	color: var(--yellow);
+	background-color: white;
 	border: 0;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+	border-top-left-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+}
+
+#link-button:focus {
+	outline: 0;
 }
 
 #logout {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 0.1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    font-family: "Sanchez";
+	margin-left: 1rem;
+	margin-right: 1rem;
+	padding: 0.1rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	font-family: "Sanchez";
 	font-size: 1rem;
-    color: var(--yellow);
-    background-color: white;
+	color: var(--yellow);
+	background-color: white;
 	border: 0;
-    border-radius: 0.5rem;
+	border-radius: 0.5rem;
 }
 
-#user-icon:hover #username {
-    background-color: var(--purple);
+#user-icon:hover #link-button {
+	background-color: var(--purple);
 }
 
 #user-icon:hover .fa-user-circle {
-    color: var(--purple);
+	color: var(--purple);
 }
 
 #logout:hover {
-    background-color: var(--purple);
+	background-color: var(--purple);
 }
 
-#logout:active, #user-icon:active {
-    transform: scale(0.96);
+#logout:focus {
+	outline: 0;
+}
+
+#logout:active,
+#user-icon:active {
+	transform: scale(0.96);
 }

@@ -1,6 +1,6 @@
 import { isStorageAvailable, setStorage } from "../utils/localStorage"
 
-import "../App.css"
+import "../assets/styles/InputBox-common.css"
 import "../assets/styles/Login.css"
 import { useState } from "react"
 
@@ -25,7 +25,7 @@ function Login(props) {
 	return (
 		<div className="input-container">
 			<div className="input-box">
-				<input id="user-name" type="text" placeholder="What's your name?" onChange={onEnteredNameChange}></input>
+				<input className="input-text" type="text" placeholder="What's your name?" onChange={onEnteredNameChange}></input>
 				<button type="button" onClick={onButtonClicked}>
 					Login
 				</button>
