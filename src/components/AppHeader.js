@@ -29,13 +29,17 @@ function AppHeader(props) {
 		<>
 			<header className="headerMain">
 				<div className="headerTop">
-					<div className="logoSplash">
-						<img className="logoRobot" src={logo} alt="logoRobot" />
-					</div>
-					<div className="headerTitle">Lost in Translation</div>
+					<Link to="/">
+						<div className="logoSplash">
+							<img className="logoRobot" src={logo} alt="logoRobot" />
+						</div>
+
+						<div className="headerTitle">Lost in Translation</div>
+					</Link>
 					{props.username && userIcon}
 					{props.username && logoutIcon}
 				</div>
+
 				<hr />
 			</header>
 		</>
