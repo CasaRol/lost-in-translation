@@ -1,5 +1,4 @@
 //Styling imports
-import "../App.css"
 import "../assets/styles/AppHeader.css"
 import logo from "../assets/images/stylingImages/Logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -7,7 +6,7 @@ import { faUserCircle as avatar } from "@fortawesome/free-solid-svg-icons"
 //Functional imports
 import { getStorage } from "../utils/localStorage"
 //Rounting imports
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
 
 function AppHeader(props) {
 	const userIcon = (

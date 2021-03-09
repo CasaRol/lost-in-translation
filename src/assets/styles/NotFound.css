@@ -9,3 +9,9 @@ h1 {
 	--scaler: 4vw;
 	font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
 }
+
+h2 {
+	text-align: center;
+	font-family: "Love Ya Like A Sister";
+	color: var(--grey);
+}

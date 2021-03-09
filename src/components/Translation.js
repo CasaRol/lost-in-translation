@@ -18,11 +18,11 @@ function Translation() {
 
 		let charArray = Array.from(textToTranslate.toLowerCase())
 
+		// Special characters will be skipped
 		charArray.forEach((char) => {
 			if (char === " ") {
 				signArray.push("dash")
 			} else if (/[a-zA-Z]/.test(char)) {
-				// Special characters will be skipped
 				signArray.push(char)
 			}
 		})
@@ -57,7 +57,7 @@ function Translation() {
 			</div>
 			<div id="translated">
 				{signs &&
-					signs.map((sign, index) => <img key={index} src={`individual_signs/${sign}.png`} alt="Give up" />)}
+					signs.map((sign, index) => <img key={index} src={`individual_signs/${sign}.png`} alt="Not available" />)}
 			</div>
 		</div>
 	)

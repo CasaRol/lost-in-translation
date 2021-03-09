@@ -3,9 +3,9 @@ export function isStorageAvailable(type) {
     let storage;
     try {
         storage = window[type];
-        var x = "__storage_test__";
-        storage.setItem(x, x);
-        storage.removeItem(x);
+        var testVariable = "__storage_test__";
+        storage.setItem(testVariable, testVariable);
+        storage.removeItem(testVariable);
         return true;
     }
     catch(e) {

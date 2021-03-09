@@ -4,21 +4,20 @@ import "../assets/styles/Profile.css"
 import { useState } from "react"
 import { getStorage } from "../utils/localStorage"
 
+function Profile(props) {
+	const [translations] = useState(getStorage("translations"))
 
-function Profile({ username }) {
-    const [translations] = useState(getStorage("translations"))
-
-    return (
+	return (
 		<div>
 			<div className="background-container">
 				<div id="username-container">
-					<h2 id="name">{username}'s</h2>
+					<h2 id="name">{props.username}</h2>
 					<div id="title">Translation History</div>
 				</div>
 			</div>
 			<div id="translations">
 				{translations &&
-					username &&
+					props.username &&
 					translations.map((translation, index) => (
 						<div key={index} className="translation-items">
 							"{translation}"

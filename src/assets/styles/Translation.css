@@ -10,6 +10,7 @@
     margin-left: 2rem;
     margin-right: 2rem;
     border-radius: 5rem;
+    min-height: 15vw;
 }
 
 #translated img {
