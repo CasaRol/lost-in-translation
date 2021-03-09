@@ -1,7 +1,7 @@
 .input-container {
 	display: flex;
 	flex-direction: column;
-	position: fixed;
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -44,7 +44,7 @@
 }
 
 .input-box button:hover {
-    background-color: var(--yellow_dark);
+    background-color: var(--purple);
 }
 
 .input-box button:active {
